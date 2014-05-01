@@ -6,6 +6,7 @@ public class Util {
     static Random random = new Random();
 
     //TODO
+    // return an random integer from m upto but NOT including n
     static int rndInt(int m, int n) {
         if (m>n) {
             throw new IllegalArgumentException();

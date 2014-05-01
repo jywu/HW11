@@ -48,7 +48,7 @@ public class TSP {
 				map.gen = k;
 				// display to lowest distance tour
 				old_pool[0].display(map);
-				Util.pause(250);
+				Util.pause(2000);//250->2000
 				if (old_pool[0].distance == 4 * Map.WIDTH) {
 					break;
 				}
