@@ -97,7 +97,7 @@ public class Tour implements Comparable {
         double d = 0;
         City[] cities = tsp.cities;
         for(int i=1; i < index.length; i++) {
-            d += cities[i-1].distance(cities[i]);
+            d += cities[index[i-1]].distance(cities[index[i]]);
         }
         return d;
     }
@@ -166,19 +166,19 @@ public class Tour implements Comparable {
         for(int j = 0; j < x1; j++) {
             int current = child.index[j];
             if(isIn(current, middle2, 0, middle2.length-1)) {
-                child.index[j] = uniq[k];
-                while(uniq[k] == -1) {
-                    k = (k+1) % uniq.length; 
-                }                             
+                child.index[j] = uniq[k++];
+//                while(uniq[k] == -1) {
+//                    k = (k+1) % uniq.length; 
+//                }                             
             }
         }
         for(int j = x2+1; j < child.index.length; j++) {
             int current = child.index[j];
             if(isIn(current, middle2, 0, middle2.length-1)) {
-                child.index[j] = uniq[k];
-                while(uniq[k] == -1) {
-                    k = (k+1) % uniq.length; 
-                }               
+                child.index[j] = uniq[k++];
+//                while(uniq[k] == -1) {
+//                    k = (k+1) % uniq.length; 
+//                }               
             }            
         }
 
