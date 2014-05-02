@@ -12,6 +12,7 @@ class City {
         this.x = x;
         this.y = y;
     }
+    
 
     double distance(City c) {
         // TODO return distance to city c. Euclidean distance

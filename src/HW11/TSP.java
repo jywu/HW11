@@ -15,7 +15,7 @@ public class TSP {
 	static final double p_mutate = 0.1;
 
 	TSP() {
-		this.cities = GenerateCities.square(8);
+		this.cities = ReadCities.read();
 		Tour.tsp = this;
 		this.map = new Map(this);
 
